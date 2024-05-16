@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <title>Dashboard Team 9 Section Surabaya</title>
+</head>
+
+<body>
+
+    <!--========== HEADER START ==========-->
+    <header>
+        <div class="container">
+            <div class="topbar">
+                <div class="logo">
+                    <h2>DB Team9</h2>
+                </div>
+                <div class="search">
+                    <input type="text" id="search" placeholder="search here">
+                    <label for="search"><i class="fas fa-search"></i></label>
+                </div>
+                <i class="fas fa-bell"></i>
+                <div class="user">
+                    <img src="img/Sample_User_Icon.png" alt="#">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--========== HEADER FINISH ==========-->
+
+    <!--========== SIDEBAR/ASIDE START ==========-->
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fas fa-th-large"></i>
+                    <div>Dashboard</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--========== SIDEBAR/ASIDE FINISH ==========-->
+
+    <!--========== MAIN START ==========-->
+    <main>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Total Revenue</div>
+                        <div class="number">52,7 M</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Total Units</div>
+                        <div class="number">61.146</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Total Sales</div>
+                        <div class="number">1.478.703</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Pilih Rentang Tanggal</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!--========== CHARTS ==========-->
+            <div class="charts">
+                <div class="chart">
+                    <h2>Sales Trends</h2>
+                    <img src="img/gambar1.png" alt="">
+                </div>
+                <div class="chart" id="doughnut-chart">
+                    <h2>Borough</h2>
+                    <img src="img/gambar2.png" alt="">
+                </div>
+                <div class="chart" id="three">
+                    <h2>Commercial</h2>
+                    <img src="img/gambar3.png" alt="">
+                </div>
+                <div class="chart" id="three">
+                    <h2>Neighborhood</h2>
+                    <img src="img/gambar4.png" alt="">
+                </div>
+            </div>
+
+
+            <!--========== TABLE ==========-->
+            <div class="table-container">
+                <h2>Sales Data</h2>
+                <div class="filter-container">
+                    <input type="text" id="filterInput" placeholder="Filter by date...">
+                    <i class="fas fa-filter"></i>
+                </div>
+                <table id="salesTable">
+                    <thead>
+                        <tr>
+                            <th>Borough</th>
+                            <th>Neighborhood</th>
+                            <th>Building Category</th>
+                            <th>Building Class</th>
+                            <th>Address</th>
+                            <th>Residental Unit</th>
+                            <th>Commercial Unit</th>
+                            <th>Total Unit</th>
+                            <th>Year Build</th>
+                            <th>Sale Price</th>
+                            <th>Sale Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>Sound View</td>
+                            <td>25 Luxury Hotels</td>
+                            <td>2</td>
+                            <td>755 White Plains Road</td>
+                            <td>771</td>
+                            <td>4</td>
+                            <td>775</td>
+                            <td>1960</td>
+                            <td>5.020.000</td>
+                            <td>07/11/2016</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kips Bay</td>
+                            <td>08 Rentals Elevator Apart</td>
+                            <td>4</td>
+                            <td>460-520 2ND AVENUE</td>
+                            <td>948</td>
+                            <td>7</td>
+                            <td>955</td>
+                            <td>1977</td>
+                            <td>70.936.348</td>
+                            <td>30/06/2017</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Harlem Central</td>
+                            <td>10 Coops Elevator Apart</td>
+                            <td>2</td>
+                            <td>63 Wall Street</td>
+                            <td>108</td>
+                            <td>12</td>
+                            <td>120</td>
+                            <td>1987</td>
+                            <td>657.000.987</td>
+                            <td>12/05/2016</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Fashion</td>
+                            <td>10 Coops Elevator Apart</td>
+                            <td>2</td>
+                            <td>2232 Brigham Street</td>
+                            <td>212</td>
+                            <td>8</td>
+                            <td>300</td>
+                            <td>1998</td>
+                            <td>878.987.893</td>
+                            <td>03/12/2016</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Forest Hills</td>
+                            <td>25 Luxury Hotels</td>
+                            <td>2</td>
+                            <td>135 Ocean Parkway</td>
+                            <td>657</td>
+                            <td>4</td>
+                            <td>661</td>
+                            <td>1982</td>
+                            <td>35.956.308</td>
+                            <td>17/04/2017</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!--========== MAIN FINISH ==========-->
+
+    <!--========== FOOTER START ==========-->
+    <footer>
+        <div class="container">
+            <p>&copy; Created By Team 9 Section Surabaya | MSIB 2024.</p>
+        </div>
+    </footer>
+    <!--========== FOOTER FINISH ==========-->
+
+</body>
+
+</html>
