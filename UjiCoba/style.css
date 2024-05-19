@@ -238,6 +238,14 @@ table tr:hover {
   background-color: #e0e0e0;
 }
 
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+#filterInput {
+  margin-right: 10px;
+}
+
 /* Footer Start */
 footer {
   background: #fff;
