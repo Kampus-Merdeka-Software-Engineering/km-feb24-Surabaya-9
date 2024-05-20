@@ -20,11 +20,11 @@ document.getElementById('filterButton').addEventListener('click', function() {
             }
         }
     } else {
-        warningMessage.style.display = 'block';
+        alert('Please enter a date in the format DD/MM/YYYY.');
     }
 
     for (var i = 1; i < rows.length; i++) {
-        var cell = rows[i].getElementsByTagName('td')[10]; // Kolom 11 (Sale Date)
+        var cell = rows[i].getElementsByTagName('td')[10]; 
         if (cell) {
             var cellValue = cell.textContent || cell.innerText;
             if (cellValue.toLowerCase().indexOf(filterValue) > -1) {
