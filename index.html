@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Dashboard Team 9 Section Surabaya</title>
+</head>
+
+<body>
+
+    <!--========== HEADER START ==========-->
+    <header>
+        <div class="container">
+            <div class="topbar">
+                <div class="logo">
+                    <h2>DB Team9</h2>
+                </div>
+                <div></div>
+                <i class="fas fa-bell"></i>
+                <div class="user">
+                    <img src="img/Sample_User_Icon.png" alt="#">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--========== HEADER FINISH ==========-->
+
+    <!--========== SIDEBAR/ASIDE START ==========-->
+    <aside class="sidebar">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div>Dashboard</div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!--========== SIDEBAR/ASIDE FINISH ==========-->
+
+    <!--========== MAIN START ==========-->
+    <main>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Total Revenue</div>
+                        <div class="number">52,7 M</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Total Units</div>
+                        <div class="number">61.146</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Total Sales</div>
+                        <div class="number">1.478.703</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--========== CHARTS ==========-->
+            <div class="charts">
+                <div class="chart">
+                    <h2 class="chart-title" style="color: white;">Sales Trends</h2>
+                    <canvas id="lineChart"></canvas>
+                </div> 
+            
+                <div class="chart">
+                    <h2 class="chart-title" style="color: white;">Total Sale Price Borough MEI & AUGUST</h2>
+                    <canvas id="chart6"></canvas>
+                </div>
+                
+                <div class="chart">
+                    <h2 class="chart-title" style="color: white;">Total Sale Price Neighborhood MEI & AUGUST</h2>
+                    <canvas id="chart7"></canvas>
+                </div>
+
+                <div class="chart">
+                    <h2 class="chart-title" style="color: white;">Total Sale Price Building Category MEI & AUGUST</h2>
+                    <canvas id="chart8"></canvas>
+                </div> 
+            
+                <div class="chart">
+                    <h2 class="chart-title" style="color: white;">Borough Sales Overview</h2>
+                    <canvas id="barChart1"></canvas>
+                </div> 
+                
+                <div class="chart">
+                    <h2 class="chart-title" style="color: white;">Total Sales in Building Category of Borough 5</h2>
+                    <canvas id="barChart3"></canvas>
+                </div>
+            
+                <div class="chart">
+                    <h2 class="chart-title" style="color: white;">Top Building Classes by Neighborhood</h2>
+                    <canvas id="barChart2"></canvas>
+                </div>
+                
+                <div class="chart">
+                    <h2 class="chart-title" style="color: white;">Top Neighborhoods by Commercial Unit Type</h2>
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>                      
+
+            <!--========== TABLE ==========-->
+            <div class="controls">
+                <label for="entries-select">Show entries:</label>
+                <select id="entries-select">
+                    <option value="15">15</option>
+                    <option value="35">35</option>
+                    <option value="75">75</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Borough <span class="sort-icon" id="sortIcon0"></span></th>
+                        <th onclick="sortTable(1)">Neighborhood <span class="sort-icon" id="sortIcon1"></span></th>
+                        <th onclick="sortTable(2)">Building Category <span class="sort-icon" id="sortIcon2"></span></th>
+                        <th onclick="sortTable(3)">Address <span class="sort-icon" id="sortIcon4"></span></th>
+                        <th onclick="sortTable(4)">Total Unit <span class="sort-icon" id="sortIcon7"></span></th>
+                        <th onclick="sortTable(5)">Year Build <span class="sort-icon" id="sortIcon8"></span></th>
+                        <th onclick="sortTable(6)">Sale Price <span class="sort-icon" id="sortIcon9"></span></th>
+                        <th onclick="sortTable(7)">Sale Date <span class="sort-icon" id="sortIcon10"></span></th>
+                    </tr>
+                    <tr>
+                        <div class="filter-container">
+                            <input type="text" id="filterInput" placeholder="Filter by...">
+                            <button id="filterButton">Submit</button>
+                            <p id="warningMessage" style="color: red; display: none;"></p>
+                        </div>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data From Javascript -->
+                </tbody>
+            </table>
+            <div class="pagination-container">
+                <button id="prev-page">Previous</button>
+                <span id="page-info"></span>
+                <button id="next-page">Next</button>
+            </div>
+    </main>
+    <!--========== MAIN FINISH ==========-->
+
+    <!--========== JAVASCRIPT START ==========-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+    <script src="js/tabel.js"></script>
+
+    <!--========== JAVASCRIPT FINISH ==========-->
+
+    <!--========== FOOTER START ==========-->
+    <footer>
+        <div class="container">
+            <p>&copy; Created By Team 9 Section Surabaya | MSIB 2024.</p>
+        </div>
+    </footer>
+    <!--========== FOOTER FINISH ==========-->
+</body>
+
+</html>
